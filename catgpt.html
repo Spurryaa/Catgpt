@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="assets\catGPT_logo.png" />
+    <meta
+      property="og:description"
+      content="A conversational cat bot that listens and reacts."
+    />
+    <title>catGPT</title>
+    <link rel="stylesheet" href="catgpt.css" />
+
+    <link rel="icon" type="image/x-icon" href="assets/catGPT_icon.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <div class="menu-box">
+          <div>
+            <h1>catGPT</h1>
+            <p>
+              Inspired by chatGPT, but better, because cats are superior to AI.
+            </p>
+          </div>
+          <div>
+            <hr />
+            <div class="links">
+              <div class="link">
+                <a href="https://chat.openai.com/chat" target="_blank"
+                  >Real chatGPT</a
+                >
+              </div>
+
+              <div class="link" onclick="clearConversation()">
+                Clear Conversation
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-box">
+        <div id="input-display"></div>
+        <div class="chat-input">
+          <form id="chatForm" autocomplete="off" onsubmit="chatInputHandler();">
+            <input
+              type="text"
+              class="userInput"
+              id="user-input"
+              placeholder="type here..."
+            />
+
+            <button type="submit" class="btn">
+              <img src="assets/send.jpg" alt="send" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./chat.js"></script>
+</html>
